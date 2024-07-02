@@ -11,6 +11,7 @@ import {
 //import Loader from 'react-loaders';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
+import {ProgressBar} from "react-bootstrap";
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -22,6 +23,17 @@ const About = () => {
 
         return () => clearTimeout(timer);
     }, []);
+
+    const skills = [
+        { name: 'Java', level: 45 , color: 'red'},
+        { name: 'Python', level: 60 , color: 'yellow'},
+        { name: 'C++', level: 55 , color: 'brown'},
+        { name: 'Swift', level: 40 , color: 'blue'},
+        { name: 'Spring Boot', level: 45 , color: 'darkgreen'},
+        { name: 'React.js', level: 60 , color: 'cornflowerblue'},
+        { name: 'Node.js', level: 50, color: 'darkseagreen'},
+        { name: 'PostgreSQL', level: 40 , color: 'orange'},
+    ];
 
     return (
         <>
@@ -49,6 +61,8 @@ const About = () => {
                         I'd say that I'm very interested in sports, comics, anime, and
                         am very passionate in bodybuilding and lifting in general.
                     </p>
+                    <br></br>
+                    <br></br>
                 </div>
 
                 <div className='tech-stack'>
@@ -65,14 +79,25 @@ const About = () => {
                         <h1>
                             <AnimatedLetters
                                 letterClass={letterClass}
-                                strArray={['L', 'a', 'n', 'g', 'u', 'a', 'g', 'e', 's']}
+                                strArray={['F', 'a', 'v', 'o', 'r', 'i', 't', 'e', ' ',
+                                    'T', 'e', 'c', 'h', 'n ', 'o', 'l', 'o', 'g', 'i', 'e', 's']}
                                 idx={15}
                             />
                         </h1>
-                        <p>Yap</p>
-                        <br></br>
-                        <br></br>
-                        <p>Yap</p>
+                        <div className="skills">
+                            {skills.map((skill, index) => (
+                                <div key={index} className="skill">
+                                    <p>{skill.name}</p>
+                                    <div className="progress-bar">
+                                        <div
+                                            className="progress"
+                                            style={{width: `${skill.level}%`,
+                                                backgroundColor: `${skill.color}`}}
+                                        ></div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="stage-cube-cont">

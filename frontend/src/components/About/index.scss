@@ -41,23 +41,39 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill p {
+  margin: 0 0 5px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 20px;
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
 .stage-cube-cont {
   display: flex;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
-  margin-top: 20px;
-}
-
-.stage-cube-cont {
-  width: 50%;
-  height: 100%;
-  top: 0;
-  padding-top: 18%;
-  margin-left: 0;
-  position: relative;
-  right: 0;
-  overflow: hidden;
+  margin-top: 10px;
 }
 
 .cubespinner {
@@ -67,7 +83,9 @@
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 50px 50px 0;
-  margin-left: calc(50% - 500px);
+  padding-bottom: 50%;
+  margin-bottom: 50%;
+  margin-left: calc(100% - 500px);
 
   div {
     position: absolute;
