@@ -2,36 +2,16 @@
   z-index: 0;
   width: 400px;
   height: 609px;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 0;
-  right: 15%;
+  right: 25%;
   bottom: 0;
   left: auto;
   margin: auto;
-
-  svg {
-    width: 150%;
-    height: auto;
-    bottom: 0;
-    transform: rotateZ(10deg) !important;
-  }
-
-  .solid-logo {
-    position: absolute;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: 0;
-    margin: auto;
-    width: 140%;
-    opacity: 0;
-    transform: rotateZ(10deg) !important;
-    z-index: 1;
-  }
 }
 
-.svg-container {
-  stroke: #ffd700;
-  stroke-width: 10;
+.solid-logo {
+  width: 200%;
+  height: auto;
 }
