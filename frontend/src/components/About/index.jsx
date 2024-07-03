@@ -12,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
 import Modal from 'react-modal';
 import pImage from '../../assets/images/portfolioImage.png';
-import resume from '../../assets/images/Sujay Patel Resume.pdf';
+import resume from '../../assets/images/SUJAY-PATEL-RESUME.pdf';
 
 
 function About() {
