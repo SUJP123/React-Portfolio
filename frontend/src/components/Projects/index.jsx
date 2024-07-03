@@ -20,7 +20,7 @@ function Projects() {
         },
         {
             name: "Study Gears",
-            link: "",
+            link: "https://study-gears-11k9qh3pf-sujp123s-projects.vercel.app/",
             git: "https://github.com/SUJP123/study-gears",
             desc: "Chatbot site to help students study with additional task managing features",
             languages: ["Java", "JavaScript", "HTML/CSS"],
