@@ -8,72 +8,75 @@ import {
     faJsSquare,
     faReact,
 } from '@fortawesome/free-brands-svg-icons';
-//import Loader from 'react-loaders';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './index.scss';
-import {ProgressBar} from "react-bootstrap";
+import Modal from 'react-modal';
+import pImage from '../../assets/images/portfolioImage.png';
+import resume from '../../assets/images/Sujay Patel Resume.pdf';
 
-const About = () => {
+
+function About() {
     const [letterClass, setLetterClass] = useState('text-animate')
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setLetterClass('text-animate-hover');
-        }, 4000);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);
 
     const skills = [
-        { name: 'Java', level: 45 , color: 'red'},
-        { name: 'Python', level: 60 , color: 'yellow'},
+        { name: 'Java', level: 75 , color: 'red', label: ''},
+        { name: 'Python', level: 80 , color: 'yellow'},
         { name: 'C++', level: 55 , color: 'brown'},
-        { name: 'Swift', level: 40 , color: 'blue'},
-        { name: 'Spring Boot', level: 45 , color: 'darkgreen'},
-        { name: 'React.js', level: 60 , color: 'cornflowerblue'},
-        { name: 'Node.js', level: 50, color: 'darkseagreen'},
-        { name: 'PostgreSQL', level: 40 , color: 'orange'},
+        { name: 'Swift', level: 50 , color: 'blue'},
+        { name: 'Spring Boot', level: 70 , color: 'darkgreen'},
+        { name: 'React.js', level: 65 , color: 'cornflowerblue'},
+        { name: 'Node.js', level: 72, color: 'darkseagreen'},
+        { name: 'PostgreSQL', level: 78 , color: 'orange'},
     ];
 
     return (
         <>
             <div className="container about-page">
+                <div className='grid'>
                 <div className="text-zone">
-                    <h1>
-                        <AnimatedLetters
-                            letterClass={letterClass}
-                            strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
-                            idx={15}
-                        />
-                    </h1>
-                    <p>
-                        I'm a very ambitious Computer Science and Biomedical Engineering Major
-                        at UNC Chapel Hill. I'm passionate and actively pursuing a career in
-                        software and biomedical engineering, with a goal in the future to work
-                        with medical software and devices.
-                    </p>
-                    <p align="LEFT">
-                        I'm very confident, curious, social, and love to work with others, especially
-                        when it comes to projects.
-                    </p>
-                    <p>
-                        Aside from school and tech, if I were to describe my interests in one sentence,
-                        I'd say that I'm very interested in sports, comics, anime, and
-                        am very passionate in bodybuilding and lifting in general.
-                    </p>
+                        <h1>
+                            <AnimatedLetters
+                                letterClass={letterClass}
+                                strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
+                                idx={15}
+                            />
+                        </h1>
+                        <p>
+                            I'm a very ambitious Computer Science and Biomedical Engineering Major
+                            at UNC Chapel Hill. I'm passionate and actively pursuing a career in
+                            software and biomedical engineering, with a goal in the future to work
+                            with medical software and devices.
+                        </p>
+                        <p>
+                            I'm very confident, curious, social, and love to work with others, especially
+                            when it comes to projects.
+                        </p>
+                        <p>
+                            Aside from school and tech, if I were to describe my interests in one sentence,
+                            I'd say that I'm very interested in sports, comics, anime, and
+                            am very passionate in bodybuilding and lifting in general.
+                        </p>
                     <br></br>
                     <br></br>
+                </div>
+                    <div className='right-side'>
+                        <img src={pImage} alt="Portfolio" className="portfolio-image"/>
+                        <div className="resume-links">
+                            <button className="flat-button" onClick={() => setModalIsOpen(true)}>View Resume</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div className='tech-stack'>
-                    <h1>
-                        <AnimatedLetters
-                            letterClass={letterClass}
-                            strArray={['T', 'e', 'c', 'h', '', 'S', 't', 'a', 'c', 'k']}
-                            idx={15}
-                        />
-                    </h1>
-                </div>
+
                 <div className="tech-container">
                     <div className="text-zone">
                         <h1>
@@ -139,6 +142,16 @@ const About = () => {
                     <br></br>
                     <br></br>
                 </div>
+                <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={() => setModalIsOpen(false)}
+                    contentLabel="Resume Modal"
+                    className="Modal"
+                    overlayClassName="Overlay"
+                >
+                    <button onClick={() => setModalIsOpen(false)} className="close-button">X</button>
+                    <iframe src={resume} title="Resume" className="resume-frame"></iframe>
+                </Modal>
             </div>
             {/* <Loader type="pacman" /> */}
         </>

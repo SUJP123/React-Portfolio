@@ -1,0 +1,162 @@
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.text-zone {
+  width: 40%;
+  max-height: 90%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-contacts {
+  padding-bottom: 30px;
+}
+
+h2 {
+  color: #333;
+  font-size: 40px;
+  line-height: 53px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+
+  &:before {
+    margin-left: 40px;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -40px;
+    left: -15px;
+    opacity: 0.6;
+  }
+
+  &:after {
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 20px;
+    animation: fadeIn 1s 1.7s backwards;
+    opacity: 0.6;
+  }
+}
+
+h1 {
+  color: #333;
+  font-size: 56px;
+  line-height: 53px;
+  margin: 0;
+  font-family: 'Coolvetica';
+  font-weight: 400;
+
+  &:before {
+    margin-left: 40px;
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -40px;
+    left: -15px;
+    opacity: 0.6;
+  }
+
+  &:after {
+    font-family: 'La Belle Aurore', cursive;
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 20px;
+    animation: fadeIn 1s 1.7s backwards;
+    opacity: 0.6;
+  }
+}
+
+.flat-button {
+  color: #ffd700;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid #ffd700;
+  margin-top: 25px;
+  animation: fadeInAnimation 1s 1.8s backwards;
+  white-space: nowrap;
+
+  &:hover {
+    background: #ffd700;
+    color: #333;
+  }
+}
+
+.form-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1em;
+  color: #333;
+}
+
+textarea {
+  height: 200px;
+}
+
+.icon-list {
+  padding-top: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .form-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .flat-button {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 124px;
+  }
+}
