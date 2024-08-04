@@ -5,6 +5,7 @@ import House from '../../assets/images/House-Prices.png';
 import Chatbot from '../../assets/images/NBA-chatbot.png';
 import Study from '../../assets/images/Study-Gears.png';
 import Clash from '../../assets/images/Clash.png';
+import deals from '../../assets/images/deals.png';
 
 function Projects() {
 
@@ -16,7 +17,7 @@ function Projects() {
             desc: "Clothing Site to help users get the best deals with AI recommender system",
             languages: ["Java", "Python", "JavaScript", "HTML/CSS"],
             tech: ["Spring Boot", "TensorFlow", "React.js", "PostgreSQL", "WebScraping"],
-            img: Premier
+            img: deals
         },
         {
             name: "NBA Premier Stats",
