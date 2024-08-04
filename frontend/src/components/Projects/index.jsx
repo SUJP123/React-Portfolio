@@ -10,6 +10,15 @@ function Projects() {
 
     const mainProjectList = [
         {
+            name: "Deals For You",
+            link: "https://dealsforyou.vercel.app/",
+            git: "https://github.com/SUJP123/DealsForYou",
+            desc: "Clothing Site to help users get the best deals with AI recommender system",
+            languages: ["Java", "Python", "JavaScript", "HTML/CSS"],
+            tech: ["Spring Boot", "TensorFlow", "React.js", "PostgreSQL", "WebScraping"],
+            img: Premier
+        },
+        {
             name: "NBA Premier Stats",
             link: "https://nba-premier-l5kix5t83-sujp123s-projects.vercel.app/",
             git: "https://github.com/SUJP123/NBA_Premier_Stats",
@@ -17,15 +26,6 @@ function Projects() {
             languages: ["Java", "Python", "JavaScript", "HTML/CSS"],
             tech: ["Spring Boot", "React.js", "PostgreSQL", "Scikit-Learn", "APIs", "WebScraping"],
             img: Premier
-        },
-        {
-            name: "Study Gears",
-            link: "https://study-gears-11k9qh3pf-sujp123s-projects.vercel.app/",
-            git: "https://github.com/SUJP123/study-gears",
-            desc: "Chatbot site to help students study with additional task managing features",
-            languages: ["Java", "JavaScript", "HTML/CSS"],
-            tech: ["Spring Boot", "React.js", "PostgreSQL", "APIs"],
-            img: Study
         },
         {
             name: "Housing Price Predictor",
@@ -39,6 +39,14 @@ function Projects() {
     ];
 
     const smallerProjects = [
+        {
+            name: "Study Gears",
+            link: "https://study-gears.vercel.app/",
+            git: "https://github.com/SUJP123/study-gears",
+            desc: "Chatbot site using OpenAI api to help students study and record tasks",
+            tech: ["Spring Boot", "React.js", "PostgreSQL", "APIs"],
+            img: Study
+        },
         {
             name: "Your Clash Stats",
             link: "https://urclashstats.fly.dev/",
